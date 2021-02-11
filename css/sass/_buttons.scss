@@ -1,0 +1,19 @@
+/* general btns trial */
+
+.btn {
+  border-radius: 18px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  outline: transparent;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 2px solid var(--idenity-clr);
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--idenity-clr);
+}

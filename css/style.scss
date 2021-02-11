@@ -1,0 +1,427 @@
+/* importing sass files */
+
+@import "sass/variables";
+@import "sass/mixins";
+@import "sass/buttons";
+
+/* === my rules ===*/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.white-space-50 {
+  padding-bottom: 50px;
+}
+
+.white-space-100 {
+  padding-bottom: 100px;
+}
+
+/* === my rules === */
+
+/* === fonts === */
+@font-face {
+  font-family: "droid";
+  src: url("/fonts/Droid-Arabic-Kufi.ttf");
+}
+
+@font-face {
+  font-family: "droid";
+  src: url("/fonts/DroidKufi-Regular.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "droid";
+  src: url("/fonts/DroidKufi-Bold.ttf");
+  font-weight: 700;
+}
+
+/* === fonts === */
+
+body {
+  font-family: "droid";
+  direction: rtl;
+  max-width: 100%;
+  color: $darkColor;
+  p {
+    font-size: 18px;
+  }
+}
+
+/* scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 10px;
+  height: 10px;
+  background-color: $idenityColor;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+  &.show {
+    opacity: 1;
+  }
+  &:hover {
+    background-color: #7c7c7c;
+  }
+}
+/* scroll to top */
+
+h2.title {
+  font-size: 42px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.center {
+  text-align: center;
+}
+/* start navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #d1d1d1;
+  font-weight: 900;
+  font-size: 18px;
+  padding: 10px;
+  z-index: 99;
+  color: $idenityColor;
+  @media (max-width: 576px) {
+    padding: 0px;
+  }
+  /* menu-toggle */
+  .menu-toggle {
+    @media (max-width: 576px) {
+      background-image: url("../img/menu.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 25px;
+      background-color: $idenityColor;
+      width: 40px;
+      height: 40px;
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      z-index: 999;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.5s ease-in-out;
+      &.active {
+        background-image: url("../img/close.png");
+        background-size: 20px;
+      }
+    }
+  }
+  /* menu-toggle */
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease-in-out;
+    @media (max-width: 576px) {
+      display: none;
+      &.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+      }
+    }
+    li {
+      @media (max-width: 576px) {
+        margin-bottom: 40px;
+      }
+    }
+    a {
+      margin-left: 25px;
+      transition: 0.5s ease-in-out;
+      @media (max-width: 576px) {
+        margin-bottom: 25px;
+      }
+      &.active,
+      &:hover {
+        color: #b06c6c;
+      }
+    }
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+}
+/* End navbar */
+
+/* start header */
+header {
+  background-image: url("../img/food\ \(14\).jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 90vh;
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+  .overlay {
+    @include overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-text {
+    color: $lightColor;
+    width: 50%;
+    margin: 100px 0;
+    @media (max-width: 991px) {
+      width: 100%;
+      margin: 50px 0;
+    }
+    h1 {
+      padding-top: 20px;
+    }
+    p {
+      line-height: 2;
+      padding: 5px 0px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* start who section */
+
+.who {
+  .section-info {
+    p {
+      font-size: 14px;
+      line-height: 1.8;
+      font-weight: 700;
+    }
+  }
+  .color-boxes {
+    .box {
+      color: #fff;
+      padding: 35px 15px;
+      text-align: center;
+      margin-bottom: 25px;
+      border-radius: 10px;
+      background-color: $greenColor;
+
+      &.two {
+        background-color: $orangeColor;
+      }
+      i {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+/* End who section */
+/* start products section */
+.products {
+  background-color: #f8f8f8;
+  text-align: center;
+
+  h2.title {
+    text-align: center;
+  }
+
+  .image-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    @media (min-width: 575px) {
+      width: 250px;
+      height: 200px;
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+    img {
+      border-radius: 15px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+  .overlay {
+    @include overlay-small;
+    background-color: rgba(0, 0, 0, 0.6);
+    @media (max-width: 576px) {
+      font-size: 12px;
+    }
+  }
+}
+/* End products section */
+/* start service section */
+.service {
+  background-image: url("../img/food\ \(12\).jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  .overlay {
+    @include overlay;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .service-box {
+    clip-path: polygon(15% 24%, 88% 11%, 99% 100%, 51px 91%);
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 0px 35px;
+    @media (max-width: 576px) {
+      clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
+      padding: 0px 5px;
+    }
+  }
+  h2 {
+    font-size: 42px;
+    text-align: right;
+    padding-top: 52px;
+    margin-bottom: 3px;
+    font-weight: bold;
+  }
+  p {
+    padding: 10px 55px;
+    @media (max-width: 576px) {
+      padding: 0px 5px 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+/* End service section */
+
+/* start start section */
+
+.start {
+  background-color: $greenColor;
+  color: #fff;
+  img {
+    border-radius: 5px;
+  }
+  .start-details {
+    p {
+      line-height: 2;
+      margin: 40px 0;
+    }
+  }
+}
+/* End start section */
+
+/* start value section */
+.value {
+  .value-item {
+    margin-bottom: 50px;
+    position: relative;
+    img {
+      width: 90px;
+      height: 90px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+/* End value section */
+
+/* Start clients section */
+.clients {
+  background-color: #fff;
+  .client-item {
+    p {
+      font-weight: 600;
+    }
+  }
+}
+
+/* End clients section */
+
+/* Start Why us section */
+.why-us {
+  background-color: $orangeColor;
+  color: #fff;
+  p:first-of-type {
+    margin-bottom: 50px;
+  }
+  .why-content {
+    border-left: 1px solid #fff;
+    h4 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+    i {
+      font-size: 98px;
+    }
+  }
+}
+/* End Why us section */
+
+/* Start footer*/
+footer {
+  padding-top: 30px;
+  @media (max-width: 576px) {
+    padding-top: 5px;
+  }
+
+  h2.title {
+    @media (max-width: 576px) {
+      font-size: 24px;
+    }
+  }
+
+  i {
+    font-size: 54px;
+    color: $greenColor;
+    margin-left: 15px;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: #3dc82c;
+    }
+    @media (max-width: 576px) {
+      font-size: 36px;
+    }
+  }
+  .copyrights {
+    p {
+      text-transform: capitalize;
+      font-size: 11px;
+      margin-bottom: 0;
+      font-weight: 600;
+      color: #7c7c7c;
+    }
+  }
+}
+/* End footer*/
