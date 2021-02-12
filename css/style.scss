@@ -106,12 +106,12 @@ nav {
   padding: 10px;
   z-index: 99;
   color: $idenityColor;
-  @media (max-width: 576px) {
+  @include mobile {
     padding: 0px;
   }
   /* menu-toggle */
   .menu-toggle {
-    @media (max-width: 576px) {
+    @include mobile {
       background-image: url("../img/menu.png");
       background-position: center;
       background-repeat: no-repeat;
@@ -139,7 +139,7 @@ nav {
     align-items: center;
     justify-content: center;
     transition: 0.5s ease-in-out;
-    @media (max-width: 576px) {
+    @include mobile {
       display: none;
       &.active {
         display: flex;
@@ -149,14 +149,14 @@ nav {
       }
     }
     li {
-      @media (max-width: 576px) {
+      @include mobile {
         margin-bottom: 40px;
       }
     }
     a {
       margin-left: 25px;
       transition: 0.5s ease-in-out;
-      @media (max-width: 576px) {
+      @include mobile {
         margin-bottom: 25px;
       }
       &.active,
@@ -168,7 +168,7 @@ nav {
   .logo {
     display: flex;
     align-items: center;
-    @media (max-width: 576px) {
+    @include mobile {
       display: none;
     }
   }
@@ -274,7 +274,7 @@ header {
   .overlay {
     @include overlay-small;
     background-color: rgba(0, 0, 0, 0.6);
-    @media (max-width: 576px) {
+    @include mobile {
       font-size: 12px;
     }
   }
@@ -301,7 +301,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 0px 35px;
-    @media (max-width: 576px) {
+    @include mobile {
       clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
       padding: 0px 5px;
     }
@@ -315,7 +315,7 @@ header {
   }
   p {
     padding: 10px 55px;
-    @media (max-width: 576px) {
+    @include mobile {
       padding: 0px 5px 20px;
       font-size: 16px;
     }
@@ -396,12 +396,12 @@ header {
 /* Start footer*/
 footer {
   padding-top: 30px;
-  @media (max-width: 576px) {
+  @include mobile {
     padding-top: 5px;
   }
 
   h2.title {
-    @media (max-width: 576px) {
+    @include mobile {
       font-size: 24px;
     }
   }
@@ -414,7 +414,7 @@ footer {
     &:hover {
       color: #3dc82c;
     }
-    @media (max-width: 576px) {
+    @include mobile {
       font-size: 36px;
     }
   }
