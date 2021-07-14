@@ -53,8 +53,6 @@ scrollToSection(navLinks);
 const menuToggle = document.querySelector("nav .menu-toggle");
 const navigation = document.querySelector("nav .navigation");
 
-console.log(navigation);
-
 menuToggle.addEventListener("click", showNavigation);
 
 function showNavigation() {
