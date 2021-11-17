@@ -177,7 +177,7 @@ nav {
 
 /* start header */
 header {
-  background-image: url("../img/food\ \(14\).jpg");
+  background-image: url("../img/food(14).jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -382,9 +382,10 @@ header {
   }
   .why-content {
     border-left: 1px solid #fff;
-    h4 {
+    p {
       font-size: 22px;
       margin-bottom: 15px;
+      font-weight: 600;
     }
     i {
       font-size: 98px;

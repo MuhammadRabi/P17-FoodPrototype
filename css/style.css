@@ -118,10 +118,10 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   background-color: #d1d1d1;
   font-weight: 900;
   font-size: 18px;
@@ -167,11 +167,11 @@ nav .navigation {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
@@ -186,11 +186,11 @@ nav .navigation {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     height: 100vh;
   }
 }
@@ -213,7 +213,8 @@ nav .navigation a {
   }
 }
 
-nav .navigation a.active, nav .navigation a:hover {
+nav .navigation a.active,
+nav .navigation a:hover {
   color: #b06c6c;
 }
 
@@ -222,8 +223,8 @@ nav .logo {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 @media (max-width: 576px) {
@@ -235,13 +236,13 @@ nav .logo {
 /* End navbar */
 /* start header */
 header {
-  background-image: url("../img/food (14).jpg");
+  background-image: url("../img/food(14).jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   height: 90vh;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0% 100%);
 }
 
 header .overlay {
@@ -335,7 +336,7 @@ header .hero-text p {
   }
   .products .image-item:hover img {
     -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
   }
 }
 
@@ -361,11 +362,11 @@ header .hero-text p {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -395,21 +396,21 @@ header .hero-text p {
 
 .service .service-box {
   -webkit-clip-path: polygon(15% 24%, 88% 11%, 99% 100%, 51px 91%);
-          clip-path: polygon(15% 24%, 88% 11%, 99% 100%, 51px 91%);
+  clip-path: polygon(15% 24%, 88% 11%, 99% 100%, 51px 91%);
   background-color: rgba(255, 255, 255, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   padding: 0px 35px;
 }
@@ -417,7 +418,7 @@ header .hero-text p {
 @media (max-width: 576px) {
   .service .service-box {
     -webkit-clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
-            clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
+    clip-path: polygon(0% 23%, 103% 9%, 100% 100%, 15px 94%);
     padding: 0px 5px;
   }
 }
@@ -503,9 +504,10 @@ header .hero-text p {
   border-left: 1px solid #fff;
 }
 
-.why-us .why-content h4 {
+.why-us .why-content p {
   font-size: 22px;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .why-us .why-content i {
